@@ -1,4 +1,31 @@
-body {
-background-color: blueviolet;
+.calculator {
+    width: 300px;
+    margin: 50 auto;
+    padding: 20px;
+    border: 30px solid #da18c9;
+    height:25vh
 
-}
+  }
+  
+  input[type="text"] {
+    width: 95%; 
+    margin-bottom: 10px;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: right;
+    display: flex; 
+   
+
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
