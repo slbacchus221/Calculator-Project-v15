@@ -1,17 +1,34 @@
-let result = document.getElementById('result');
+let calculateValue = '';
 
 function number(value) {
-  result.value += value;
+    calculateValue += value;
+    document.getElementById('display').value = calculateValue;
 }
 
-function clearScreen() {
-  result.value = '';
+function clearDisplay() {
+    calculateValue = '';
+    document.getElementById('display').value = calculateValue;
 }
 
 function calculate() {
-  try {
-    result.value = eval(result.value);
-  } catch(error) {
-    result.value = 'Error';
-  }
+    const display = document.getElementById('display');
+    const expression = display.value;
+
+    let result;
+    if (expression.includes('+')) {
+        const numbers = expression.split('+');
+        result = parseFloat(numbers[0]) + parseFloat(numbers[1]);
+    } else if (expression.includes('-')) {
+        const numbers = expression.split('-');
+        result = parseFloat(numbers[0]) - parseFloat(numbers[1]);
+    } else if (expression.includes('*')) {
+        const numbers = expression.split('*');
+        result = parseFloat(numbers[0]) * parseFloat(numbers[1]);
+    } else if (expression.includes('/')) {
+        const numbers = expression.split('/');
+        result = parseFloat(numbers[0]) / parseFloat(numbers[1]);
+    }
+
+    calculateValue = result.toString();
+    display.value = calculateValue;
 }
