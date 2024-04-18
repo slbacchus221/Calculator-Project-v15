@@ -1,9 +1,9 @@
 .calculator {
     width: 300px;
-    margin: 40 auto;
+    margin: 50 auto;
     padding: 20px;
     border: 30px solid #da18c9;
-    height:25vh;
+    height: vh;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     border-top-left-radius: 10%;
@@ -26,31 +26,40 @@
 
   }
   
+.body {
+display: flex;
+justify-content: center;
+align-items: center;
 
+
+}
 
 .buttons {
-    display: grid;
-    grid-gap: 10px 20px; /* vertical gap 10px, horizontal gap 20px */
-    width: calc(100% - 20px);
-    margin: auto;
-    padding: 10px;
-    font-size: 24px;
+  display: grid;
+   width: 100%;
+   height: 100%;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5px;
    
-    grid-template-columns: 1fr 1fr; /* two explicit columns */
-    grid-auto-rows: 200px; /* height for additional rows */
+    
 
 }
 
 .buttons button {
     
-    width: 100%;
-    height: 60px;
+    /* width: 100%;
+    height: 60px; */
     border-radius: 50%;
     font-size: 24px;
     background-color: #e0e0e0;
-    border: none;
-    outline: none;
+    border: black;
+    outline: black;
     cursor: pointer;
-
+   
 }
 
+.total {
+grid-column: span 2;
+    
+
+}
