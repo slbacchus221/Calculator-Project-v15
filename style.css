@@ -1,4 +1,5 @@
 .calculator {
+  background-color: chartreuse;
     width: 300px;
     margin: 50 auto;
     padding: 20px;
@@ -10,8 +11,9 @@
     border-top-right-radius: 10%;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
+    
 
-  }
+}
   
   input[type="text"] {
     width: 95%; 
@@ -25,14 +27,7 @@
    
 
   }
-  
-.body {
-display: flex;
-justify-content: center;
-align-items: center;
-
-
-}
+ 
 
 .buttons {
   display: grid;
@@ -41,7 +36,6 @@ align-items: center;
    grid-template-columns: repeat(3, 1fr);
    gap: 5px;
    
-    
 
 }
 
@@ -52,7 +46,6 @@ align-items: center;
     border-radius: 50%;
     font-size: 24px;
     background-color: #e0e0e0;
-    
     outline: black;
     cursor: pointer;
    
@@ -63,3 +56,13 @@ grid-column: span 2;
     
 
 }
+
+ 
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  }
+  
